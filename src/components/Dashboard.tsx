@@ -14,66 +14,66 @@ export default function Dashboard() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h2 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Dashboard
         </h2>
-        <p className="text-gray-400">Visão geral das suas finanças</p>
+        <p className="text-gray-600 dark:text-gray-400">Visão geral das suas finanças</p>
       </div>
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Balance Card */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#00FF00]/30 rounded-2xl p-6 hover:border-[#00FF00] transition-all duration-300 group">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-blue-500/30 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 group shadow-lg">
           <div className="flex items-center justify-between mb-4">
-            <div className="p-3 bg-[#00FF00]/10 rounded-xl group-hover:bg-[#00FF00]/20 transition-all">
-              <Wallet className="w-6 h-6 text-[#00FF00]" />
+            <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all">
+              <Wallet className="w-6 h-6 text-blue-500" />
             </div>
             <span className="text-xs text-gray-500 font-medium">Este mês</span>
           </div>
-          <p className="text-sm text-gray-400 mb-1">Saldo Atual</p>
-          <p className="text-2xl font-bold text-[#00FF00]" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Saldo Atual</p>
+          <p className="text-2xl font-bold text-blue-500" style={{ fontFamily: 'Poppins, sans-serif' }}>
             R$ {balance.toLocaleString('pt-BR')}
           </p>
         </div>
 
         {/* Income Card */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/50 transition-all duration-300 group">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 group shadow-lg">
           <div className="flex items-center justify-between mb-4">
-            <div className="p-3 bg-[#00FF00]/10 rounded-xl group-hover:bg-[#00FF00]/20 transition-all">
-              <ArrowUpRight className="w-6 h-6 text-[#00FF00]" />
+            <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all">
+              <ArrowUpRight className="w-6 h-6 text-blue-500" />
             </div>
-            <span className="text-xs text-[#00FF00] font-medium">+12%</span>
+            <span className="text-xs text-blue-500 font-medium">+12%</span>
           </div>
-          <p className="text-sm text-gray-400 mb-1">Receitas</p>
-          <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Receitas</p>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             R$ {totalIncome.toLocaleString('pt-BR')}
           </p>
         </div>
 
         {/* Expenses Card */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/50 transition-all duration-300 group">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 group shadow-lg">
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-all">
               <ArrowDownRight className="w-6 h-6 text-red-500" />
             </div>
             <span className="text-xs text-red-500 font-medium">-8%</span>
           </div>
-          <p className="text-sm text-gray-400 mb-1">Despesas</p>
-          <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Despesas</p>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             R$ {totalExpenses.toLocaleString('pt-BR')}
           </p>
         </div>
 
         {/* Savings Rate Card */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/50 transition-all duration-300 group">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 group shadow-lg">
           <div className="flex items-center justify-between mb-4">
-            <div className="p-3 bg-[#00FF00]/10 rounded-xl group-hover:bg-[#00FF00]/20 transition-all">
-              <PiggyBank className="w-6 h-6 text-[#00FF00]" />
+            <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all">
+              <PiggyBank className="w-6 h-6 text-blue-500" />
             </div>
-            <span className="text-xs text-[#00FF00] font-medium">Ótimo!</span>
+            <span className="text-xs text-blue-500 font-medium">Ótimo!</span>
           </div>
-          <p className="text-sm text-gray-400 mb-1">Taxa de Poupança</p>
-          <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Taxa de Poupança</p>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             {savingsRate}%
           </p>
         </div>
@@ -82,41 +82,42 @@ export default function Dashboard() {
       {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Monthly Overview */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/30 transition-all duration-300">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 shadow-lg">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-[#00FF00]/10 rounded-lg">
-              <TrendingUp className="w-5 h-5 text-[#00FF00]" />
+            <div className="p-2 bg-blue-500/10 rounded-lg">
+              <TrendingUp className="w-5 h-5 text-blue-500" />
             </div>
-            <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Visão Mensal
             </h3>
           </div>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={monthlyData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1A1A1A" />
-              <XAxis dataKey="month" stroke="#666" style={{ fontSize: '12px' }} />
-              <YAxis stroke="#666" style={{ fontSize: '12px' }} />
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" className="dark:stroke-[#1A1A1A]" />
+              <XAxis dataKey="month" stroke="#9ca3af" className="dark:stroke-[#666]" style={{ fontSize: '12px' }} />
+              <YAxis stroke="#9ca3af" className="dark:stroke-[#666]" style={{ fontSize: '12px' }} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#1A1A1A',
-                  border: '1px solid #00FF00',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #3b82f6',
                   borderRadius: '8px',
-                  color: '#fff',
+                  color: '#000',
                 }}
+                className="dark:!bg-[#1A1A1A] dark:!text-white"
               />
-              <Bar dataKey="income" fill="#00FF00" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="income" fill="#3b82f6" radius={[8, 8, 0, 0]} />
               <Bar dataKey="expenses" fill="#FF4444" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
 
         {/* Category Distribution */}
-        <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/30 transition-all duration-300">
+        <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 shadow-lg">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-[#00FF00]/10 rounded-lg">
-              <Target className="w-5 h-5 text-[#00FF00]" />
+            <div className="p-2 bg-blue-500/10 rounded-lg">
+              <Target className="w-5 h-5 text-blue-500" />
             </div>
-            <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Gastos por Categoria
             </h3>
           </div>
@@ -137,11 +138,12 @@ export default function Dashboard() {
               </Pie>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#1A1A1A',
-                  border: '1px solid #00FF00',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #3b82f6',
                   borderRadius: '8px',
-                  color: '#fff',
+                  color: '#000',
                 }}
+                className="dark:!bg-[#1A1A1A] dark:!text-white"
               />
             </PieChart>
           </ResponsiveContainer>
@@ -149,7 +151,7 @@ export default function Dashboard() {
             {categoryExpenses.map((cat) => (
               <div key={cat.name} className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: cat.color }} />
-                <span className="text-xs text-gray-400">{cat.name}</span>
+                <span className="text-xs text-gray-600 dark:text-gray-400">{cat.name}</span>
               </div>
             ))}
           </div>
@@ -157,28 +159,28 @@ export default function Dashboard() {
       </div>
 
       {/* Goals Section */}
-      <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/30 transition-all duration-300">
-        <h3 className="text-lg font-semibold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 shadow-lg">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Metas Financeiras
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {goals.map((goal) => {
             const progress = (goal.current / goal.target) * 100;
             return (
-              <div key={goal.id} className="bg-[#0D0D0D] border border-[#252525] rounded-xl p-4 hover:border-[#00FF00]/50 transition-all">
+              <div key={goal.id} className="bg-gray-50 dark:bg-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-xl p-4 hover:border-blue-500/50 transition-all">
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-sm font-medium text-white">{goal.title}</h4>
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-white">{goal.title}</h4>
                   <span className="text-xs text-gray-500">{progress.toFixed(0)}%</span>
                 </div>
-                <div className="w-full bg-[#1A1A1A] rounded-full h-2 mb-3">
+                <div className="w-full bg-gray-200 dark:bg-[#1A1A1A] rounded-full h-2 mb-3">
                   <div
-                    className="bg-gradient-to-r from-[#00FF00] to-[#00AA00] h-2 rounded-full transition-all duration-500"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-500"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-400">R$ {goal.current.toLocaleString('pt-BR')}</span>
-                  <span className="text-[#00FF00]">R$ {goal.target.toLocaleString('pt-BR')}</span>
+                  <span className="text-gray-600 dark:text-gray-400">R$ {goal.current.toLocaleString('pt-BR')}</span>
+                  <span className="text-blue-500">R$ {goal.target.toLocaleString('pt-BR')}</span>
                 </div>
               </div>
             );
@@ -187,8 +189,8 @@ export default function Dashboard() {
       </div>
 
       {/* Badges Section */}
-      <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#252525] rounded-2xl p-6 hover:border-[#00FF00]/30 transition-all duration-300">
-        <h3 className="text-lg font-semibold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <div className="bg-white dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D0D0D] border border-gray-200 dark:border-[#252525] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 shadow-lg">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Conquistas
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -198,16 +200,16 @@ export default function Dashboard() {
               className={`
                 p-4 rounded-xl border text-center transition-all duration-300
                 ${badge.earned 
-                  ? 'bg-[#00FF00]/10 border-[#00FF00]/30 hover:border-[#00FF00]' 
-                  : 'bg-[#0D0D0D] border-[#252525] opacity-50'
+                  ? 'bg-blue-500/10 border-blue-500/30 hover:border-blue-500' 
+                  : 'bg-gray-50 dark:bg-[#0D0D0D] border-gray-200 dark:border-[#252525] opacity-50'
                 }
               `}
             >
               <div className={`text-3xl mb-2 ${badge.earned ? 'animate-pulse' : ''}`}>
                 {badge.earned ? '🏆' : '🔒'}
               </div>
-              <h4 className="text-sm font-medium text-white mb-1">{badge.title}</h4>
-              <p className="text-xs text-gray-400">{badge.description}</p>
+              <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-1">{badge.title}</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400">{badge.description}</p>
             </div>
           ))}
         </div>

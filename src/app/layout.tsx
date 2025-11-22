@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="dark">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +28,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${inter.variable} antialiased bg-[#0D0D0D] text-white`}
+        className={`${inter.variable} antialiased bg-white dark:bg-[#0D0D0D] text-gray-900 dark:text-white`}
       >
         {children}
       </body>
