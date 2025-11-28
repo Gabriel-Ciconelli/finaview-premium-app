@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +13,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Finaview - Gestão Financeira Premium",
   description: "Controle suas finanças com inteligência e estilo",
+  manifest: "/manifest.json",
+  themeColor: "#3b82f6",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Finaview",
+  },
 };
 
 export default function RootLayout({
@@ -26,11 +35,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
       </head>
       <body
         className={`${inter.variable} antialiased bg-white dark:bg-[#0D0D0D] text-gray-900 dark:text-white`}
       >
-        {children}
+        <CurrencyProvider>
+          {children}
+        </CurrencyProvider>
       </body>
     </html>
   );
